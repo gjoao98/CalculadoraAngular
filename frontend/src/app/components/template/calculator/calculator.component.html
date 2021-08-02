@@ -1,37 +1,37 @@
 <div class="back">
     <div class="calculator">
         <h1>Calculator</h1>
-        <p id="result"></p>
+        <p id="result">{{ num }}</p>
         <table>
             <tr>
+                <td><button (click)="allClear()">C</button></td>
+                <td><button (click)="clearOne()"><</button></td>
                 <td></td>
-                <td></td>
-                <td><button onclick="rase()">C</button></td>
-                <td><button onclick="insert('/')">/</button></td>
+                <td><button (click)="pressButton('/')">/</button></td>
             </tr>
             <tr>
-                <td><button onclick="insert('7')">7</button></td>
-                <td><button onclick="insert('8')">8</button></td>
-                <td><button onclick="insert('9')">9</button></td>
-                <td><button onclick="insert('*')">X</button></td>
+                <td><button (click)="pressButton('7')">7</button></td>
+                <td><button (click)="pressButton('8')">8</button></td>
+                <td><button (click)="pressButton('9')">9</button></td>
+                <td><button (click)="pressButton('x')">x</button></td>
             </tr>
             <tr>
-                <td><button onclick="insert('4')">4</button></td>
-                <td><button onclick="insert('5')">5</button></td>
-                <td><button onclick="insert('6')">6</button></td>
-                <td><button onclick="insert('-')">-</button></td>
+                <td><button (click)="pressButton('4')">4</button></td>
+                <td><button (click)="pressButton('5')">5</button></td>
+                <td><button (click)="pressButton('6')">6</button></td>
+                <td><button (click)="pressButton('-')">-</button></td>
             </tr>
             <tr>
-                <td><button onclick="insert('1')">1</button></td>
-                <td><button onclick="insert('2')">2</button></td>
-                <td><button onclick="insert('3')">3</button></td>
-                <td><button onclick="insert('+')">+</button></td>
+                <td><button (click)="pressButton('1')">1</button></td>
+                <td><button (click)="pressButton('2')">2</button></td>
+                <td><button (click)="pressButton('3')">3</button></td>
+                <td><button (click)="pressButton('+')">+</button></td>
             </tr>
             <tr>
                 <td></td>
-                <td><button onclick="insert('0')">0</button></td>
+                <td><button (click)="pressButton('0')">0</button></td>
                 <td></td>
-                <td><button onclick="calculate()">=</button></td>
+                <td><button (click)="getAnswer()">=</button></td>
             </tr>
         </table>
     </div>
