@@ -1,10 +1,11 @@
 <div class="back">
+    <h1 id="title">Gabriel João</h1>
     <div class="calculator">
         <h1>Calculator</h1>
         <p id="result">{{ num }}</p>
         <table>
             <tr>
-                <td><button (click)="allClear()">C</button></td>
+                <td><button id="clear" (click)="allClear()">C</button></td>
                 <td><button (click)="clearOne()"><</button></td>
                 <td></td>
                 <td><button (click)="pressButton('/')">/</button></td>
@@ -31,7 +32,7 @@
                 <td></td>
                 <td><button (click)="pressButton('0')">0</button></td>
                 <td></td>
-                <td><button (click)="getAnswer()">=</button></td>
+                <td><button id="answered" (click)="getAnswer()">=</button></td>
             </tr>
         </table>
     </div>
