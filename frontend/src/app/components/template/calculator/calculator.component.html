@@ -1,39 +1,33 @@
-<div class="back">
+<div class="back"> <!-- page background -->
     <h1 id="title">Gabriel João</h1>
-    <div class="calculator">
+    <div class="calculator"> <!-- div that draws the calculator as a whole -->
         <h1>Calculator</h1>
-        <p id="result">{{ num }}</p>
-        <table>
-            <tr>
-                <td><button id="clear" (click)="allClear()">C</button></td>
-                <td><button (click)="clearOne()"><</button></td>
-                <td></td>
-                <td><button (click)="pressButton('/')">/</button></td>
-            </tr>
-            <tr>
-                <td><button (click)="pressButton('7')">7</button></td>
-                <td><button (click)="pressButton('8')">8</button></td>
-                <td><button (click)="pressButton('9')">9</button></td>
-                <td><button (click)="pressButton('x')">x</button></td>
-            </tr>
-            <tr>
-                <td><button (click)="pressButton('4')">4</button></td>
-                <td><button (click)="pressButton('5')">5</button></td>
-                <td><button (click)="pressButton('6')">6</button></td>
-                <td><button (click)="pressButton('-')">-</button></td>
-            </tr>
-            <tr>
-                <td><button (click)="pressButton('1')">1</button></td>
-                <td><button (click)="pressButton('2')">2</button></td>
-                <td><button (click)="pressButton('3')">3</button></td>
-                <td><button (click)="pressButton('+')">+</button></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><button (click)="pressButton('0')">0</button></td>
-                <td></td>
-                <td><button id="answered" (click)="getAnswer()">=</button></td>
-            </tr>
-        </table>
+        <p id="result">{{ num }}</p> <!-- p that show what the user is typing and the result of the account -->
+
+        <!-- div that covers all the buttons on the calculator -->
+        <div class="calculator-btn">
+            <button type="button" value="C" class="clear" (click)="allClear()">C</button>
+            <button type="button" value="<" class="operators" (click)="clearOne()"><</button>
+            <button type="button" value="/" class="operators" (click)="pressButton('/')">/</button>
+            
+            <button type="button" value="7" class="numbers" (click)="pressButton('7')">7</button>
+            <button type="button" value="8" class="numbers" (click)="pressButton('8')">8</button>
+            <button type="button" value="9" class="numbers" (click)="pressButton('9')">9</button>
+            <button type="button" value="X" id="mult" (click)="pressButton('x')">X</button>
+
+            <button type="button" value="4" class="numbers" (click)="pressButton('4')">4</button>
+            <button type="button" value="5" class="numbers" (click)="pressButton('5')">5</button>
+            <button type="button" value="6" class="numbers" (click)="pressButton('6')">6</button>
+            <button type="button" value="-" class="operators" (click)="pressButton('-')">-</button>
+
+            <button type="button" value="1" class="numbers" (click)="pressButton('1')">1</button>
+            <button type="button" value="2" class="numbers" (click)="pressButton('2')">2</button>
+            <button type="button" value="3" class="numbers" (click)="pressButton('3')">3</button>
+            <button type="button" value="+" class="operators" (click)="pressButton('+')">+</button>
+
+            <button class="numbers"></button> <!-- Empty button-->
+            <button type="button" value="0" class="numbers" (click)="pressButton('0')">0</button>
+            <button type="button" value="=" class="equal" (click)="getAnswer()">=</button>
+        </div>
     </div>
 </div>

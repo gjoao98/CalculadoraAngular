@@ -24,6 +24,27 @@ export class CalculatorComponent implements OnInit {
 
   }
 
+  // This function calculates the addition
+  Addition() {
+    this.num = (this.operand1 + this.operand2).toString();
+  }
+
+  // This function calculates the subtraction
+  Subtraction() {
+    this.num = (this.operand1 - this.operand2).toString();
+  }
+
+  // This function calculates the division
+  Division() {
+    this.num = (this.operand1 / this.operand2).toString();
+  }
+
+  // This function calculates the multiplication
+  Multiplication() {
+    this.num = (this.operand1 * this.operand2).toString();
+  }
+
+  // This function show in the screen what the user is typing
   pressButton(button: string) {
     if (button === '/' || button === 'x' || button === '-' || button === '+') {
        const lastButton = this.num[this.num.length - 1];
@@ -48,21 +69,22 @@ export class CalculatorComponent implements OnInit {
     this.num += button;
  }
 
+ // This function calls the calculation functions by the operator typed, if none was typed, it gives an error
  getAnswer() {
   this.calculationString = this.num;
   this.operand2 = parseFloat(this.num.split(this.operator)[1]);
 
     if (this.operator === '/') {
-      this.num = (this.operand1 / this.operand2).toString();
+      this.Division();
       
     } else if (this.operator === 'x') {
-      this.num = (this.operand1 * this.operand2).toString();
+      this.Multiplication();
       
     } else if (this.operator === '-') {
-      this.num = (this.operand1 - this.operand2).toString();
+      this.Subtraction();
 
     } else if (this.operator === '+') {
-      this.num = (this.operand1 + this.operand2).toString();
+      this.Addition();
       
     } else {
       this.num = 'Invalid Operation';
@@ -72,11 +94,13 @@ export class CalculatorComponent implements OnInit {
     this.setOperator = false;
   }
 
+  // This function erases all that was typed
   allClear() {
     this.num = '';
     this.setOperator = false;
   }
 
+  // This function erases one by one caractere that was typed
   clearOne() {
     this.num = this.num.substring(0, this.num.length -1);
     this.setOperator = false;
