@@ -30,7 +30,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 4px;    
 
-    margin: 65px 9px 0 9px;
+    margin: 6px 9px 0 9px;
 }
 
 /* Stylizes all h1 on page */
@@ -73,7 +73,14 @@ button:hover {
 .equal {
     background-color: rgb(221, 88, 0);
     width: 100%;
-    grid-area: 5 / 3 / 5 / 5;
+    grid-area: 6 / 3 / 6 / 5;
+}
+
+/* Stylizes the button that erases one by one */
+.backspace {
+    background-color: rgb(219, 197, 0);
+    width: 100%;
+    grid-area: 1 / 3 / 1 / 5;
 }
 
 /* Stylizes the button that erases all that the user typed */

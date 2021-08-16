@@ -1,17 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-calculator',
-  templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.css']
+  selector: "app-calculator",
+  templateUrl: "./calculator.component.html",
+  styleUrls: ["./calculator.component.css"],
 })
 export class CalculatorComponent implements OnInit {
-
-  num = '';
+  num = "";
   operand1: number;
   operand2: number;
-  operator = '';
-  calculationString = '';
+  operator = "";
+  calculationString = "";
   answered = false;
   setOperator = false;
 
@@ -20,9 +19,7 @@ export class CalculatorComponent implements OnInit {
     this.operand2 = 0;
   }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   // This function calculates the addition
   Addition() {
@@ -44,22 +41,55 @@ export class CalculatorComponent implements OnInit {
     this.num = (this.operand1 * this.operand2).toString();
   }
 
+  // This function calculates the Percentage
+  Percentage() {
+    const result = (this.operand1 * this.operand2) / 100;
+    this.num = result.toString();
+  }
+
+  // This function calculates the Power
+  Power() {
+    this.num = (this.operand1 ** this.operand2).toString();
+  }
+
+  // This function calculates the Square Root
+  SquareRoot() {
+    const result = Math.sqrt(this.operand1).toFixed(2);
+    this.num = result.toString();
+  }
+
   // This function show in the screen what the user is typing
   pressButton(button: string) {
-    if (button === '/' || button === 'x' || button === '-' || button === '+') {
-       const lastButton = this.num[this.num.length - 1];
+    if (
+      button === "/" ||
+      button === "x" ||
+      button === "-" ||
+      button === "+" ||
+      button === "%" ||
+      button === "^" ||
+      button === "√"
+    ) {
+      const lastButton = this.num[this.num.length - 1];
 
-       if (lastButton === '/' || lastButton === 'x' || lastButton === '-' || lastButton === '+')  {
-         this.setOperator = true;
-       }
+      if (
+        lastButton === "/" ||
+        lastButton === "x" ||
+        lastButton === "-" ||
+        lastButton === "+" ||
+        lastButton === "%" ||
+        lastButton === "^" ||
+        lastButton === "√"
+      ) {
+        this.setOperator = true;
+      }
 
-       if ((this.setOperator) || (this.num === '')) {
-         return;
-       }
+      if (this.setOperator || this.num === "") {
+        return;
+      }
 
-       this.operand1 = parseFloat(this.num);
-       this.operator = button;
-       this.setOperator = true;
+      this.operand1 = parseFloat(this.num);
+      this.operator = button;
+      this.setOperator = true;
     }
 
     if (this.num.length === 10) {
@@ -67,43 +97,59 @@ export class CalculatorComponent implements OnInit {
     }
 
     this.num += button;
- }
+  }
 
- // This function calls the calculation functions by the operator typed, if none was typed, it gives an error
- getAnswer() {
-  this.calculationString = this.num;
-  this.operand2 = parseFloat(this.num.split(this.operator)[1]);
+  // This function calls the calculation functions by the operator typed, if none was typed, it gives an error
+  getAnswer() {
+    this.calculationString = this.num;
+    this.operand2 = parseFloat(this.num.split(this.operator)[1]);
 
-    if (this.operator === '/') {
-      this.Division();
-      
-    } else if (this.operator === 'x') {
-      this.Multiplication();
-      
-    } else if (this.operator === '-') {
-      this.Subtraction();
+    switch (this.operator) {
+      case "/":
+        this.Division();
+        break;
 
-    } else if (this.operator === '+') {
-      this.Addition();
-      
-    } else {
-      this.num = 'Invalid Operation';
+      case "x":
+        this.Multiplication();
+        break;
+
+      case "-":
+        this.Subtraction();
+        break;
+
+      case "+":
+        this.Addition();
+        break;
+
+      case "%":
+        this.Percentage();
+        break;
+
+      case "^":
+        this.Power();
+        break;
+
+      case "√":
+        this.SquareRoot();
+        break;
+
+      default:
+        this.num = "Invalid Operation";
     }
-    
+
     this.answered = true;
     this.setOperator = false;
   }
 
   // This function erases all that was typed
   allClear() {
-    this.num = '';
+    this.num = "";
     this.setOperator = false;
   }
 
   // This function erases one by one caractere that was typed
   clearOne() {
-    this.num = this.num.substring(0, this.num.length -1);
+    this.num = this.num.substring(0, this.num.length - 1);
     this.setOperator = false;
   }
 }
-

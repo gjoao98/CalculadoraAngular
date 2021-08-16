@@ -7,7 +7,11 @@
         <!-- div that covers all the buttons on the calculator -->
         <div class="calculator-btn">
             <button type="button" value="C" class="clear" (click)="allClear()">C</button>
-            <button type="button" value="<" class="operators" (click)="clearOne()"><</button>
+            <button type="button" value="<" class="backspace" (click)="clearOne()"><</button>
+
+            <button type="button" value="√" class="operators" (click)="pressButton('√')">√</button>
+            <button type="button" value="^" class="operators" (click)="pressButton('^')">^</button>
+            <button type="button" value="%" class="operators" (click)="pressButton('%')">%</button>
             <button type="button" value="/" class="operators" (click)="pressButton('/')">/</button>
             
             <button type="button" value="7" class="numbers" (click)="pressButton('7')">7</button>
