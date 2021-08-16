@@ -5,10 +5,10 @@ This Project was made as a test for an interview. Te objective was to create an 
 # Prints
 
 ## Design feito no Figma
-<img src="./Image/DesignDaCalculadora.png"/>
+<img src="./DesignDaCalculadora.png"/>
 
 ## Projeto desenvolvido igual ao layout do Figma
-<img src="./Image/CalculadoraAngular.png"/>
+<img src="CalculadoraAngular.png"/>
 
 # How to use this Application
 # Frontend
