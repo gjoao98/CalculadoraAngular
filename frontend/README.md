@@ -1,3 +1,16 @@
+# Calculadora Angular - Teste Front-End
+
+This Project was made as a test for an interview. Te objective was to create an calculator in two versions, one only mae with [JavaScript, HTML and CSS] , and the another with [Angular].
+
+# Prints
+
+## Design feito no Figma
+<img src="./Image/DesignDaCalculadora.png"/>
+
+## Projeto desenvolvido igual ao layout do Figma
+<img src="./Image/CalculadoraAngular.png"/>
+
+# How to use this Application
 # Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
