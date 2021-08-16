@@ -6,7 +6,7 @@ This Project was made as a test for an interview. Te objective was to create an 
 ## Layout Design of Calculator
 ![Design da Calculadora](https://user-images.githubusercontent.com/48125875/129624606-13aa0332-e1e6-4158-aa7e-f5a7b80e7b84.png)
 
-## Calculator project in work
+## Calculator project in action
 ![Calculadora Angular](https://user-images.githubusercontent.com/48125875/129624807-e754ae98-2a14-447b-9845-1b0ce9433c3c.png)
 
 
