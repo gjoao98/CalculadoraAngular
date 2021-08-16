@@ -2,14 +2,6 @@
 
 This Project was made as a test for an interview. Te objective was to create an calculator in two versions, one only mae with [JavaScript, HTML and CSS] , and the another with [Angular].
 
-# Prints
-
-## Design feito no Figma
-<img src="file:///C:/Users/Gabriel%20João/Desktop/Design%20da%20Calculadora.png"/>
-
-## Projeto desenvolvido igual ao layout do Figma
-<img src="file:///C:/Users/Gabriel%20João/Desktop/Calculadora%20Angular.png"/>
-
 # How to use this Application
 # Frontend
 
