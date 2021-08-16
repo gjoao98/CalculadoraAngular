@@ -3,7 +3,7 @@
 This Project was made as a test for an interview. Te objective was to create an calculator in two versions, one only mae with [JavaScript, HTML and CSS] , and the another with [Angular].
 
 # Prints
-## Layout Design of Calculator
+## Calculator Layout Design
 ![Design da Calculadora](https://user-images.githubusercontent.com/48125875/129624606-13aa0332-e1e6-4158-aa7e-f5a7b80e7b84.png)
 
 ## Calculator project in action
